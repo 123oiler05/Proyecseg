@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Política de Privacidad - VPS Integraciones</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; background: #f9f9f9; }
+    .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; }
+    h1 { color: #517dba; }
+    h2 { color: #e2691a; margin-top: 20px; }
+    p, ul { margin-bottom: 15px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Política de Privacidad</h1>
+    <p><strong>Última actualización:</strong> 25 de octubre de 2025</p>
+
+    <h2>1. ¿Qué datos personales recopilamos?</h2>
+    <p>Cuando usted envía el formulario de contacto en nuestro sitio web, recopilamos únicamente:</p>
+    <ul>
+      <li>Nombre</li>
+      <li>Correo electrónico</li>
+      <li>Mensaje</li>
+    </ul>
+
+    <h2>2. ¿Con qué finalidad usamos sus datos?</h2>
+    <p>Sus datos se utilizan exclusivamente para:</p>
+    <ul>
+      <li>Responder a su solicitud de contacto.</li>
+      <li>Brindarle información sobre nuestros servicios de automatización industrial.</li>
+    </ul>
+    <p><strong>No compartimos sus datos con terceros</strong>, ni los utilizamos para fines comerciales distintos a los mencionados.</p>
+
+    <h2>3. ¿Almacenamos sus datos?</h2>
+    <p><strong>No.</strong> Los datos enviados mediante el formulario <strong>no se almacenan en bases de datos ni archivos persistentes</strong>.
+       Solo se envían por correo electrónico a nuestro equipo interno y se eliminan del servidor inmediatamente después del envío.</p>
+
+    <h2>4. Medidas de seguridad</h2>
+    <p>Nuestra aplicación implementa las siguientes medidas de seguridad:</p>
+    <ul>
+      <li>Validación y saneamiento de entradas.</li>
+      <li>Protección contra CSRF (Cross-Site Request Forgery).</li>
+      <li>Protección reCAPTCHA contra bots.</li>
+      <li>Comunicación segura mediante HTTPS (recomendado en producción).</li>
+    </ul>
+
+    <h2>5. Sus derechos</h2>
+    <p>Usted tiene derecho a:</p>
+    <ul>
+      <li>Acceder, rectificar o cancelar sus datos personales.</li>
+      <li>Oponerse al tratamiento de sus datos.</li>
+    </ul>
+    <p>Para ejercer estos derechos, envíe un correo a: <strong>munozmarlene0@gmail.com</strong>.</p>
+
+    <h2>6. Cambios a esta política</h2>
+    <p>Nos reservamos el derecho de actualizar esta política. Cualquier cambio se publicará en esta página.</p>
+
+    <hr>
+    <p><a href="{{ url_for('main.index') }}">&larr; Regresar al inicio</a></p>
+  </div>
+</body>
+</html>

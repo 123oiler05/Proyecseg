@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="es" class="no-js">
+<head>
+  <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='images/icon.ico') }}" />
+  <meta charset="utf-8">
+  <title>VPS Integraciones y Automatizaciones</title>
+  <meta name="keywords" content="VPS, Automatizacion, Tlaxcala, Integraciones">
+  <meta name="description" content="">
+  <meta name="robots" content="index"/>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/font-awesome.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='js/owl-carousel/owl.carousel.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='js/owl-carousel/owl.theme.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='js/owl-carousel/owl.transitions.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/magnific-popup.css') }}" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/animate.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/etlinefont.css') }}">
+  <link href="{{ url_for('static', filename='css/style.css') }}" type="text/css" rel="stylesheet"/>
+</head>
+<body data-spy="scroll" data-target="#main-menu">
+
+  <div id="pageloader">
+    <div class="loader">
+      <img src="{{ url_for('static', filename='images/progress.gif') }}" alt='loader' />
+    </div>
+  </div>
+
+  <header id="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="fa fa-bars"></span>
+          </button>
+          <div class="logo-nav">
+            <a href="{{ url_for('main.index') }}">
+              <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Company logo" />
+            </a>
+          </div>
+          <div class="clear-toggle"></div>
+          <div id="main-menu" class="collapse scroll navbar-right">
+            <ul class="nav">
+              <li class="active"> <a href="#home">Inicio</a> </li>
+              <li> <a href="#about">Acerca de nosotros</a> </li>
+              <li> <a href="#works">Galeria</a> </li>
+              <li> <a href="#services">Servicios</a> </li>
+              <li> <a href="#contact">Contacto</a> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="slider-overlay"></div>
+
+  <section id="home" class="home">
+    <div class="flexslider">
+      <ul class="slides scroll">
+        <li class="first">
+          <div class="slider-text-wrapper">
+            <div class="container">
+              <div class="big">VPS Integraciones y Automatizaciones </div>
+              <div class="small">Conoce más acerca de nosotros, descarga nuestro Dossier con toda la información.</div>
+              <a href="{{ url_for('static', filename='PRESENTACION-VPS.pdf') }}" target="_blank" class="middle btn btn-white">Descargar Dossier</a>
+            </div>
+          </div>
+          <img src="{{ url_for('static', filename='images/slider/1.jpg') }}" alt="">
+        </li>
+        <li class="secondary">
+          <div class="slider-text-wrapper">
+            <div class="container">
+              <div class="big">VPS Integraciones y Automatizaciones</div>
+              <div class="small">Nuestro catalogo de soluciones abarca desde programación de PLC's y HMI's, integración de proyectos, maquinado de piezas y más...</div>
+              <a href="#about" class="middle btn btn-white">Conocer más</a>
+            </div>
+          </div>
+          <img src="{{ url_for('static', filename='images/slider/2.jpg') }}" alt="">
+        </li>
+        <li class="third">
+          <div class="slider-text-wrapper">
+            <div class="container">
+              <div class="big">VPS Integraciones y Automatizaciones </div>
+              <div class="small">Somos una empresa mexicana dedicada al desarrollo de soluciones integrales de automatización de edificios orientado al sector comercial e industrial.</div>
+              <a href="#works" class="middle btn btn-white">Ver Galeria</a>
+            </div>
+          </div>
+          <img src="{{ url_for('static', filename='images/slider/3.jpg') }}" alt="">
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="features-icon-box">
+            <div class="features-icon"><i class="fa fa-crosshairs"></i></div>
+            <div class="features-info">
+              <h4 style="color: black;">Misión</h4>
+              <p>Desarrollar la mejor solución basada en la necesidad de cada proyecto superando así la expectativa de nuestros clientes con el objetivo de mejorar su rentabilidad a través de la reducción de tiempos y costos de ejecución, tanto para proyectos nuevos como para aquellos que ya están en operación en los cuales se implementarán mejoras que equilibren la rentabilidad, vida útil y correcto funcionamiento del sistema..</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="features-icon-box">
+            <div class="features-icon"><i class="fa fa-eye"></i></div>
+            <div class="features-info">
+              <h4 style="color: black;">Visión</h4>
+              <p>Ser una compañía que crece continuamente mediante el desarrollo de soluciones integrales que generen un alto nivel de rentabilidad al negocio de nuestros clientes. Establecer un modelo de liderazgo ante nuestros competidores, socios comerciales y la sociedad. Contribuir a la mejora del medio ambiente en base al desarrollo de sistemas sustentables..</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="facts" class="section parallax">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-6 facts-box margin-bottom-30">
+          <span><i class="icon-happy"></i></span>
+          <h3>HONESTIDAD</h3>
+          <span>Actuando con rectitud e integridad ante nuestros socios comerciales y competidores</span>
+        </div>
+        <div class="col-md-3 col-sm-6 facts-box margin-bottom-30">
+          <span><i class="icon-presentation"></i></span>
+          <h3>RESPONSABILIDAD</h3>
+          <span>Cumpliendo en tiempo y forma todos nuestros compromisos pactados sin importar el entorno</span>
+        </div>
+        <div class="col-md-3 col-sm-6 facts-box margin-bottom-30">
+          <span><i class="icon-target"></i></span>
+          <h3>RESPETO</h3>
+          <span>Conduciéndonos de una manera equitativa y respetuosa ante nuestros semejantes</span>
+        </div>
+        <div class="col-md-3 col-sm-6 facts-box margin-bottom-30">
+          <span><i class="icon-trophy"></i></span>
+          <h3>LEALTAD</h3>
+          <span>Guiándonos de manera fiel ante nuestros socios comerciales, empleados y accionistas</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="title-box text-center" style="margin-bottom: 100px;">
+    <h2 class="title" style="padding-top: 70px; color: black;">PROYECTOS DE AUTOMATIZACIÓN INDUSTRIAL</h2>
+    <p>Ofrecemos servicios de Programación de PLC´s en diversas marcas asi como la creación y modificación de pantallas HMI</p>
+  </div>
+
+  <section id="blog" class="blog">
+    <div class="container-fluid" style="padding-bottom: 0%;">
+      <div class="row">
+        <div class="main_blog sections">
+          <div class="main_blog_content">
+            <div class="col-sm-6">
+              <div class="single_blog_area textwhite" style="background-color: rgb(226, 105, 26);">
+                <div class="row">
+                  <div class="col-sm-6 no-padding">
+                    <div class="single_blog_img">
+                      <img src="{{ url_for('static', filename='images/auto.jpg') }}" alt="" />
+                    </div>
+                  </div>
+                  <div class="col-sm-6 no-padding" style="padding-top: 12%; padding-bottom: 8%; padding-left: 3%; padding-right: 5%">
+                    <div class="single_blog_text s_b_left" style="text-align: center;">
+                      <h4>PROGRAMACIÓN DE PLC´S Y HMI´S  </h4>
+                      <h5>MULTIMARCAS</h5>
+                      <div class="separator2"></div>
+                      <p style="color: white;">Soluciones innovadoras y óptimas en cada área de aplicación para automatizar sus máquinas y fábricas de forma económica y flexible logrando una mayor eficiencia energética en los procesos. </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="single_blog_area textwhite" style="background-color: rgb(81, 125, 182);">
+                <div class="row">
+                  <div class="col-sm-6 no-padding">
+                    <div class="single_blog_img">
+                      <img src="{{ url_for('static', filename='images/auto2.jpg') }}" alt="" />
+                    </div>
+                  </div>
+                  <div class="col-sm-6 no-padding" style="padding-top: 12%; padding-bottom: 8%; padding-left: 3%; padding-right: 5%">
+                    <div class="single_blog_text s_b_left" style="text-align: center;">
+                      <h4>DIAGNÓSTICO Y SOPORTE A FALLAS Y PROGRAMACIÓN</h4>
+                      <div class="separator2"></div>
+                      <p style="color: white;">Brindamos servicio se soporte a fallas, detección de errores y diagnóstico, brindamos la certeza de un alto conocimiento y capacidad para solucionar cualquier obstáculo.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="single_blog_area textwhite" style="background-color: rgb(81, 125, 182);">
+                <div class="row">
+                  <div class="col-sm-6 no-padding" style="padding-top: 12%; padding-bottom: 8%; padding-left: 6%">
+                    <div class="single_blog_text s_b_left" style="text-align: center;">
+                      <h4>MODIFICACIONES EN RECETAS</h4>
+                      <div class="separator2"></div>
+                      <p style="color: white;">Realizamos cambios de recetas al momento de presentarse modificaciones en la línea de producción, acomplandonos a las nuevas necesidades. </p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 no-padding">
+                    <div class="single_blog_img">
+                      <img src="{{ url_for('static', filename='images/auto3.jpg') }}" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="single_blog_area textwhite" style="background-color: rgb(226, 105, 26);">
+                <div class="row">
+                  <div class="col-sm-6 no-padding" style="padding-top: 12%; padding-bottom: 8%; padding-left: 6%">
+                    <div class="single_blog_text s_b_left" style="text-align: center;">
+                      <h4>CONEXIÓN DE TABLEROS </h4>
+                      <h5>DE CONTROL</h5>
+                      <div class="separator2"></div>
+                      <p style="color: white;">Instalación y conexión de tableros de control, comenzando desde el diseño, planos, e implementación. </p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 no-padding">
+                    <div class="single_blog_img">
+                      <img src="{{ url_for('static', filename='images/auto4.jpg') }}" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="works" class="section">
+    <div class="title-box text-center">
+      <h2 class="title" style="color: black;">GALERÍA</h2>
+    </div>
+    <div class="work-main">
+      <ul class="work-grid">
+        {% for i in range(1, 13) %}
+        <li class="work-item thumnail-img mix corporate">
+          <div class="work-image">
+            <img src="{{ url_for('static', filename='images/works/img' + i|string + '.png') }}" alt="thumbnail">
+            <div class="hover-link">
+              <a href="{{ url_for('static', filename='images/works/img' + i|string + '.png') }}" class="popup-image">
+                <i class="fa fa-eye"></i>
+              </a>
+            </div>
+            <div class="work-caption">
+              <h4>{% if i == 1 %}Integración de botoneras
+                {% elif i == 2 %}Pintura automotriz
+                {% elif i == 3 %}Instalación de equipos en tableros.
+                {% elif i == 4 %}Tableros de Control
+                {% elif i == 5 %}Fabricación de piezas especiales
+                {% elif i == 6 %}Diseño y Fabricación
+                {% elif i == 7 %}Piezas Fabricadas
+                {% elif i == 8 %}Fabricación en masa
+                {% elif i == 9 %}Estaciones de trabajo
+                {% elif i == 10 %}Corte laser
+                {% elif i == 11 %}Piezas especiales
+                {% elif i == 12 %}Diseño en AutoCAD
+                {% endif %}</h4>
+              <p>Descripción</p>
+            </div>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section id="services" class="section">
+    <div class="container">
+      <div class="row">
+        <div class="title-box text-center">
+          <h2 class="title">PRODUCTOS Y SERVICIOS</h2>
+        </div>
+      </div>
+      <div class="team-items team-carousel">
+        <div class="item">
+          <img src="{{ url_for('static', filename='images/team/team10.jpg') }}" alt="" />
+          <h4>PROGRAMACIÓN DE PLC Y HMI</h4>
+          <h5>AUTOMATIZACIÓN</h5>
+          <p> Soporte de ingeniería en proyectos de migraciones o supervisión de técnicos especializados, desarrollamos la programación, brindamos soporte a cualquier falla, creamos proyectos desde 0. </p>
+        </div>
+        <div class="item">
+          <img src="{{ url_for('static', filename='images/team/team2.jpg') }}" alt="" />
+          <h4>VENTA DE EQUIPOS</h4>
+          <h5>ELECTROMECÁNICOS Y AUTOMATIZACIÓN</h5>
+          <p>Tenemos el compromiso con todos nuestros socios de negocios de brindar los mejores precios en el mercado y la amplia experiencia, conocimiento y la atención personalizada hacia nuestros clientes contando con disponibilidad de productos, amplio stock de refacciones, para cumplir todas las necesidades de nuestros clientes. </p>
+        </div>
+        <div class="item">
+          <img src="{{ url_for('static', filename='images/team/team3.jpg') }}" alt="" />
+          <h4>VENTA DE REFACCIONES</h4>
+          <h5>PARA EQUIPOS MECÁNICOS INDUSTRIALES</h5>
+          <p>1. Varios tipos de rodamientos (para carga axial, lineales, de aguja)<br> 2. Chumaceras especiales (piso, tensoras, cocol, de pared)<br>3. Bandas de varias marcas.<br>4. Poleas.<br>5. Engranes.<br>6. Equipos hidráulicos y mangueras. </p>
+        </div>
+        <div class="item">
+          <img src="{{ url_for('static', filename='images/team/team4.jpg') }}" alt="" />
+          <h4>INSTALACIÓN DE SISTEMAS DE CONTROL</h4>
+          <h5>ESPECIALISTAS EN LA INSTALACIÓN DE  INSTRUMENTACIÓN INDUSTRIAL Y SISTEMAS DE CONTROL.</h5>
+          <p>• A) Canalización del sistema en pared gruesa y pared delgada.<br>• B) Cableado de comunicación; Fielbus, Profibus, Lontalk Bacnet, Modbus, Devicenet, etc.….<br>• C) Conexionado de dispositivos de control; 4-20 mA, Hart, 0-10V, 0-5V, Termistores, etc.…<br>• D) Instalación de dispositivos de protección para intemperie; Nema 4, Nema 3R, etc.…<br>• E) Apoyo para condicionamiento y arranque. </p>
+        </div>
+        <div class="item">
+          <img src="{{ url_for('static', filename='images/team/team1.jpg') }}" alt="" />
+          <h4>INSTALACIÓN ELÉCTRICA</h4>
+          <h5>CONTAMOS CON PERSONAL ESPECIALIZADO PARA BRINDAR SERVICIOS ELÉCTRICOS COMO:</h5>
+          <p>A) Canalización del sistema eléctrico para interior e intemperie.<br> B) Cableado de fuerza 120/220/277/480 VAC.<br> C) Conexionado de Fuerza en equipo finales.<br> D) Apoyo para solución de problemas.<br> E) Instalación y cableado de sistemas de iluminación.<br> F) Conocemos y manejamos todas las marcas del mercado</p>
+        </div>
+        <div class="item">
+          <img src="{{ url_for('static', filename='images/team/team9.jpg') }}" alt="" />
+          <h4>FABRICACIÓN DE REFACCIONES</h4>
+          <h5>MECÁNICAS EN MAQUINADOS</h5>
+          <p>En VPS contamos con equipo de trabajo, maquinaria (CNC y Convencional) y soporte técnico en la rama de maquinarias y herramientas. </p>
+        </div>
+        <div class="item">
+          <img src="{{ url_for('static', filename='images/team/team2.jpg') }}" alt="" />
+          <h4>VENTA DE EQUIPOS</h4>
+          <h5>ELECTROMECÁNICOS Y AUTOMATIZACIÓN</h5>
+          <p>Tenemos el compromiso con todos nuestros socios de negocios de brindar los mejores precios en el mercado y la amplia experiencia, conocimiento y la atención personalizada hacia nuestros clientes contando con disponibilidad de productos, amplio stock de refacciones, para cumplir todas las necesidades de nuestros clientes. </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog" class="blog">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="main_blog sections">
+          <div class="main_blog_content">
+            <div class="col-sm-6">
+              <div class="single_blog_area textwhite">
+                <div class="row">
+                  <div class="col-sm-6 no-padding">
+                    <div class="single_blog_img">
+                      <img src="{{ url_for('static', filename='images/team/team7.jpg') }}" alt="" />
+                    </div>
+                  </div>
+                  <div class="col-sm-6 no-padding">
+                    <div class="single_blog_text s_b_left">
+                      <h4>SUMINISTRO Y MANO DE OBRA </h4>
+                      <h5>DE PINTURA EN LAS INSTALACIONES Y EQUIPOS</h5>
+                      <div class="separator2"></div>
+                      <p>En VPS contamos con personal capacitado para realizar trabajos de pintura tales como:<br>• Pintado en limitaciones de areas.<br>• Pintado de estructuras.<br>• Pintura en fachadas del inmueble.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="single_blog_area textwhite">
+                <div class="row">
+                  <div class="col-sm-6 no-padding">
+                    <div class="single_blog_img">
+                      <img src="{{ url_for('static', filename='images/team/team8.jpg') }}" alt="" />
+                    </div>
+                  </div>
+                  <div class="col-sm-6 no-padding">
+                    <div class="single_blog_text s_b_left">
+                      <h4>INSTALACIÓN Y DISEÑO</h4>
+                      <h5>DE ESTRUCTURAS Y DISPOSITIVOS METÁLICOS (SOLDADURAS)</h5>
+                      <div class="separator2"></div>
+                      <p>En VPS INTEGRACIONES contamos con personal capacitado para realizar los trabajos requeridos por nuestros clientes en tiempo  y forma en los servicios de:<br>• Montaje electromecánico<br>• Soldadura y diseños especiales<br>• Planos en AutoCAD</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section parallax">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="title-box text-center white">
+          <h2 class="title">Estadísticas</h2>
+        </div>
+        <div class="col-sm-3 col-md-3 col-lg-3 pie-chart-main">
+          <span class="pie-chart " data-percent="100"><span class="percent"></span></span>
+          <h4>Clientes Satisfechos</h4>
+          <p>Contamos con la confianza de nuestros clientes de un trabajo garantizado.</p>
+        </div>
+        <div class="col-sm-3 col-md-3 col-lg-3 pie-chart-main">
+          <span class="pie-chart" data-percent="80"><span class="percent"></span></span>
+          <h4>Marcas del Mercado</h4>
+          <p>Contamos con gran variedad de marcas del mercado en productos eléctricos y mecánicos.</p>
+        </div>
+        <div class="col-sm-3 col-md-3 col-lg-3 pie-chart-main">
+          <span class="pie-chart " data-percent="100"><span class="percent"></span></span>
+          <h4>Disponibilidad</h4>
+          <p>La atención al cliente es nuestra prioridad y nuestro sello.</p>
+        </div>
+        <div class="col-sm-3 col-md-3 col-lg-3 pie-chart-main">
+          <span class="pie-chart" data-percent="99"><span class="percent"></span></span>
+          <h4>Trabajo Grantizado</h4>
+          <p>Tenga la seguridad de la garantia en nuestro trabajo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="clients" class="section">
+    <div class="container">
+      <div class="row">
+        <div class="title-box text-center">
+          <h2 class="title">Marcas que Manejamos</h2>
+        </div>
+        <div class="clients-carousel" style="padding-bottom: 8%;">
+          {% for i in range(1, 11) %}
+          <div class="item">
+            <a href="#" target="_blank">
+              <figure><img src="{{ url_for('static', filename='images/clients-logo/' + i|string + '.png') }}" alt="" /></figure>
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="clients-carousel" style="padding-bottom: 8%;">
+          {% for i in range(11, 22) %}
+          <div class="item">
+            <a href="#" target="_blank">
+              <figure><img src="{{ url_for('static', filename='images/clients-logo/' + i|string + '.png') }}" alt="" /></figure>
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section parallax" style="padding-bottom: 3%;">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="title-box text-center white">
+          <h2 class="title">Contacto</h2>
+        </div>
+      </div>
+      <div class="col-md-8 col-md-offset-2 contact-form">
+        <div class="contact-info text-center">
+          <p>Teléfono: 222 484 5690</p>
+          <p>Calle Hidalgo numero 12B Santa Cruz Quilehtla Tlaxcala, Tlaxcala</p>
+          <p>munozmarlene0@gmail.com</p>
+        </div>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            {% for category, message in messages %}
+              <div class="alert alert-{% if category == 'success' %}success{% elif category == 'danger' %}danger{% else %}warning{% endif %} text-center">
+                {{ message }}
+              </div>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+
+        <form method="post" action="{{ url_for('main.contact') }}">
+          {{ form.hidden_tag() }}
+          <div class="row">
+            <div class="col-md-4">
+              {{ form.name(class="form-control", placeholder="Nombre", required=True) }}
+              {% if form.name.errors %}<div class="text-danger">{{ form.name.errors[0] }}</div>{% endif %}
+            </div>
+            <div class="col-md-4">
+              {{ form.email(class="form-control", placeholder="Correo electrónico", required=True) }}
+              {% if form.email.errors %}<div class="text-danger">{{ form.email.errors[0] }}</div>{% endif %}
+            </div>
+            <div class="col-md-12">
+              {{ form.message(class="form-control", rows="10", placeholder="Escribe tu mensaje", required=True) }}
+              {% if form.message.errors %}<div class="text-danger">{{ form.message.errors[0] }}</div>{% endif %}
+            </div>
+            <div class="col-md-12" style="padding-top: 10px;">
+              {{ form.recaptcha() }}
+              {% if form.recaptcha.errors %}<div class="text-danger">{{ form.recaptcha.errors[0] }}</div>{% endif %}
+            </div>
+            <div class="col-md-12 text-right" style="padding-top: 10px;">
+              <button type="submit" class="btn btn-green">Enviar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-6 col-xs-6">
+        <div class="copyright">
+          <p>
+            © 2024 VPS Integraciones y Automatizaciones Todos los derechos reservados.<br>
+            <a href="{{ url_for('main.privacy') }}" style="color: #fff; text-decoration: underline; font-size: 0.9em;">
+              Política de Privacidad
+            </a>
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-6 col-xs-6">
+        <div class="social-icons">
+          <ul>
+            <li><a href="https://www.facebook.com/share/1B3dwEPSCw/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <div id="whatsapp" style="position: fixed; bottom: 15px; right: 15px; width:65px; height:65px; z-index:100; border-radius:50px;">
+    <a href="https://api.whatsapp.com/send/?phone=522224845690" target="_blank">
+      <img src="{{ url_for('static', filename='images/whatsapp.png') }}">
+    </a>
+  </div>
+
+  <a href="#" class="scrollup"> <i class="fa fa-chevron-up"> </i> </a>
+
+  <script src="{{ url_for('static', filename='js/jquery-1.11.1.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/owl-carousel/owl.carousel.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.flexslider-min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/easing.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.easypiechart.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.appear.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.parallax-1.1.3.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.mixitup.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+
+</body>
+</html>
