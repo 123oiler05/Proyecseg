@@ -6,6 +6,10 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import logging
 
+#----------------------------------------------
+from app.tasks import send_email_async
+
+
 # Configura el nivel de logging (útil para auditoría)
 logging.basicConfig(level=logging.INFO)
 
@@ -33,6 +37,7 @@ def privacy():
 
 # === RUTA DE PROCESAMIENTO: Envío del formulario de contacto ===
 @bp.route('/contact', methods=['POST'])
+@current_app.limiter.limit("5 per minute", methods=["POST"])
 def contact():
     """
     Procesa el formulario de contacto con validación segura.
@@ -48,6 +53,24 @@ def contact():
 
         # Registro para auditoría (IP, timestamp, etc. se pueden agregar después)
         logging.info(f"Nuevo mensaje de contacto de: {email}")
+
+        #------------------------------------------------
+        # Prepara la configuración para pasarla (como vimos en pasos anteriores)
+        mail_config = {
+            'MAIL_SERVER': current_app.config['MAIL_SERVER'],
+            'MAIL_PORT': current_app.config['MAIL_PORT'],
+            'MAIL_USERNAME': current_app.config['MAIL_USERNAME'],
+            'MAIL_PASSWORD': current_app.config['MAIL_PASSWORD']
+        }
+
+        # Llama a la tarea con .delay() (Esto es instantáneo)
+        send_email_async.delay(name, email, message_body, mail_config)
+
+        flash('¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.', 'success')
+        # Ya no necesitas el try/except aquí porque el error (si ocurre) sucederá en el worker, no aquí.
+        #-----------------------------------------------------------
+
+
 
         try:
             send_email(name, email, message_body)
@@ -65,14 +88,11 @@ def contact():
                 flash(f"Error: {error}", 'warning')
         return render_template('index.html', form=form)
 
+
+"""
 # === FUNCIÓN AUXILIAR: Envío seguro de correo ===
 def send_email(name, email, message_body):
-    """
-    Envía un correo electrónico usando SMTP autenticado.
-    - El remitente ('From') es fijo (MAIL_USERNAME), evitando header injection.
-    - Se incluye 'Reply-To' para facilitar la respuesta al cliente.
-    - El cuerpo es texto plano (evita riesgos de XSS en clientes de correo).
-    """
+    
     msg = MIMEMultipart()
     msg['From'] = current_app.config['MAIL_USERNAME']
     msg['To'] = 'maramula753@gmail.com'  # ← Correo correcto según tu HTML original
@@ -88,3 +108,5 @@ def send_email(name, email, message_body):
     server.login(current_app.config['MAIL_USERNAME'], current_app.config['MAIL_PASSWORD'])
     server.sendmail(msg['From'], msg['To'], msg.as_string())
     server.quit()
+
+"""

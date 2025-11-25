@@ -1,5 +1,5 @@
 # run.py  http://localhost:8001
-from app import create_app
+from app import create_app, celery
 
 app = create_app()
 
